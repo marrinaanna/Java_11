@@ -33,16 +33,6 @@ public class ProductManagerAndRepoTest {
     }
 
     @Test
-    void repositoryShouldNotRemoveProductById() {
-        manager.add(book1);
-        manager.add(phone1);
-        manager.add(book2);
-        assertThrows(NotFoundException.class, () -> {
-            repo.removeById(0);
-        });
-    }
-
-    @Test
     void repositoryShouldAddProducts() {
         repo.save(phone1);
         repo.save(phone2);
